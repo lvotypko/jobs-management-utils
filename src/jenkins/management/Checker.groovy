@@ -1,6 +1,6 @@
 import jenkins.model.Jenkins
 
-public static void checkJob(){
+public void checkJob(){
   println(System.getenv())
   println("$JOB_NAME")
 }
