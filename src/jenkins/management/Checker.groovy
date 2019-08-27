@@ -1,6 +1,8 @@
 import jenkins.model.Jenkins
 
-public void checkJob(){
-  println(System.getenv())
-  println("$JOB_NAME")
+public boolean isCalledFromConfigurator(){
+  if (! "$JOB_NAME".equals('job-configurator')) {
+    println("This features can be called only from job configurator")
+    throw new IllegalStateException("Feature should be used only by job configurator")
+  }
 }
