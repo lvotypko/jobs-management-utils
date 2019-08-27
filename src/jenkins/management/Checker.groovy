@@ -1,5 +1,6 @@
 import jenkins.model.Jenkins
 
 public static checkJob(){
-  println(env.JOB_NAME)
+  println(System.getEnv())
+  println($JOB_NAME)
 }
